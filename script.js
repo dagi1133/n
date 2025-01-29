@@ -15,3 +15,26 @@ window.onload = () => {
         slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
     }, 4000); // Slide every 4 seconds
 };
+
+// Form Validation
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        
+        if (!name || !email || !message) {
+            alert("Please fill in all fields before submitting.");
+            event.preventDefault();
+        } else if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            event.preventDefault();
+        }
+    });
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
