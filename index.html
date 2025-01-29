@@ -14,7 +14,7 @@
     <header>
         <nav>
             <h1>Serenity Mind Care</h1>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
@@ -33,13 +33,13 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about">
+    <section id="about" class="outlined-section">
         <h2>About Us</h2>
         <p>At Serenity Mind Care, we believe mental health is just as important as physical health. Our mission is to provide a compassionate, judgment-free space where you can explore resources, connect with experts, and begin your healing journey.</p>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="outlined-section">
         <h2>Our Services</h2>
         <div class="service">
             <h3>Therapy Services</h3>
@@ -60,29 +60,26 @@
     </section>
 
     <!-- Meet Our Experts Section -->
-    <section id="experts">
+    <section id="experts" class="outlined-section">
         <h2>Meet Our Experts</h2>
         <div class="expert-grid">
             <div class="expert-card">
                 <h3>Dr. Eleanor Hart</h3>
                 <p>Psychiatrist</p>
-                <p>Ph.D. in Psychiatry, specializing in adolescent mental health and mood disorders.</p>
             </div>
             <div class="expert-card">
                 <h3>Dr. Marcus Hayes</h3>
                 <p>Clinical Psychologist</p>
-                <p>Psy.D. in Clinical Psychology, expert in Cognitive Behavioral Therapy (CBT) and trauma recovery.</p>
             </div>
             <div class="expert-card">
                 <h3>Dr. Sophia Bennett</h3>
                 <p>Therapist and Counselor</p>
-                <p>Master's in Counseling Psychology, specializing in stress management and mindfulness-based therapy.</p>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials">
+    <section id="testimonials" class="outlined-section">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
             <div class="testimonial">
@@ -98,21 +95,25 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="outlined-section">
         <h2>Contact Us</h2>
         <form action="https://formspree.io/f/myzkwzep" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
             <button type="submit">Send Message</button>
         </form>
-        <p>Email: contact@serenitymindcare.com | Phone: +1-234-567-8901</p>
     </section>
 
     <!-- Footer -->
