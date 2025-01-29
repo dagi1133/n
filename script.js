@@ -7,9 +7,11 @@ function smoothScroll(target) {
 window.onload = () => {
     const slider = document.querySelector('.testimonial-slider');
     let scrollAmount = 0;
+    const slideWidth = slider.offsetWidth; // Use the width of the container
+
     setInterval(() => {
-        scrollAmount += slider.offsetWidth * 0.8;
-        if (scrollAmount >= slider.scrollWidth) scrollAmount = 0;
+        scrollAmount += slideWidth;
+        if (scrollAmount >= slider.scrollWidth) scrollAmount = 0; // Reset to start when at the end
         slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-    }, 4000);
+    }, 4000); // Slide every 4 seconds
 };
