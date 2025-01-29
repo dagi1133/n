@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f7f9fc;
     color: #333;
-    line-height: 1.6;
 }
 
 /* Navigation Bar */
@@ -23,42 +22,50 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #d7effb;
     text-align: center;
     padding: 3rem 1rem;
+    background-color: #d7effb;
 }
 
-button {
+/* Content Box */
+.content-box {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Expert Grid */
+.expert-grid {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Testimonials Scroll */
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+/* Footer */
+footer {
+    text-align: center;
     background-color: #6ab1d7;
     color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    cursor: pointer;
-}
-
-/* Section Styles */
-.outlined-section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
 }
